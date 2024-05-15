@@ -115,8 +115,12 @@ class ForecastWeather {
         DayConditionData hourCondition =
             DayConditionData(jsonHourCondition?['icon']);
 
-        HourData hour =
-            HourData(jsonHour['time'], jsonHour['temp_c'], hourCondition);
+        HourData hour = HourData(
+          jsonHour['time'],
+          jsonHour['temp_c'],
+          hourCondition,
+          jsonHour['precip_mm'],
+        );
 
         hours.add(hour);
       });
