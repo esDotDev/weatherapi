@@ -123,7 +123,7 @@ class HourData {
   final double? _tempC;
   final DayConditionData _condition;
   final double? _precipMm;
-  final double? _chanceOfRain;
+  final int? _chanceOfRain;
 
   HourData(this._time, this._tempC, this._condition, this._precipMm,
       this._chanceOfRain);
@@ -132,7 +132,7 @@ class HourData {
   double? get tempC => _tempC;
   DayConditionData get condition => _condition;
   double? get precipMm => _precipMm;
-  double? get chanceOfRain => _chanceOfRain;
+  int? get chanceOfRain => _chanceOfRain;
 }
 
 /// A class to represent forecast day data.
