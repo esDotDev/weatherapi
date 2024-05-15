@@ -93,15 +93,25 @@ class DayData {
   final double? _maxtempC, _mintempC, _totalsnowCm;
   final int? _dailyChanceOfRain;
   final DayConditionData _condition;
+  final double? _maxWindKph;
+  final double? _totalPrecipMm;
 
-  DayData(this._maxtempC, this._mintempC, this._totalsnowCm,
-      this._dailyChanceOfRain, this._condition);
+  DayData(
+      this._maxtempC,
+      this._mintempC,
+      this._totalsnowCm,
+      this._dailyChanceOfRain,
+      this._condition,
+      this._maxWindKph,
+      this._totalPrecipMm);
 
   double? get maxtempC => _maxtempC;
   double? get mintempC => _mintempC;
   double? get totalSnowCm => _totalsnowCm;
   int? get dailyChanceOfRain => _dailyChanceOfRain;
   DayConditionData get condition => _condition;
+  double? get maxWindKph => _maxWindKph;
+  double? get totalPrecipMm => _totalPrecipMm;
 }
 
 /// A class to represent forecast astro data.
@@ -125,8 +135,13 @@ class HourData {
   final double? _precipMm;
   final int? _chanceOfRain;
 
-  HourData(this._time, this._tempC, this._condition, this._precipMm,
-      this._chanceOfRain);
+  HourData(
+    this._time,
+    this._tempC,
+    this._condition,
+    this._precipMm,
+    this._chanceOfRain,
+  );
 
   String? get time => _time;
   double? get tempC => _tempC;

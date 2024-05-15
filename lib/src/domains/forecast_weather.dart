@@ -86,11 +86,14 @@ class ForecastWeather {
           DayConditionData(jsonDayCondition?['icon']);
 
       DayData day = DayData(
-          jsonDay?['maxtemp_c'],
-          jsonDay?['mintemp_c'],
-          jsonDay?['totalsnow_cm'],
-          jsonDay?['daily_chance_of_rain'],
-          dayCondition);
+        jsonDay?['maxtemp_c'],
+        jsonDay?['mintemp_c'],
+        jsonDay?['totalsnow_cm'],
+        jsonDay?['daily_chance_of_rain'],
+        dayCondition,
+        jsonDay?['maxwind_kph'],
+        jsonDay?['totalprecip_mm'],
+      );
 
       // --- Astro.
 
@@ -126,8 +129,12 @@ class ForecastWeather {
         hours.add(hour);
       });
 
-      ForecastDayData forecast =
-          ForecastDayData(jsonForecastDay?['date'], day, astro, hours);
+      ForecastDayData forecast = ForecastDayData(
+        jsonForecastDay?['date'],
+        day,
+        astro,
+        hours,
+      );
 
       _forecast.add(forecast);
     });
