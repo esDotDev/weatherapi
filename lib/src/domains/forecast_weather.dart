@@ -120,6 +120,7 @@ class ForecastWeather {
           jsonHour['temp_c'],
           hourCondition,
           jsonHour['precip_mm'],
+          jsonHour['chance_of_rain'],
         );
 
         hours.add(hour);
